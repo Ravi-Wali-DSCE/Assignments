@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrendCraft // Modern Apparel Store</title>
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="sss.css">
+</head>
+<body data-theme="light">
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-md sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-lightning-charge-fill text-accent me-1"></i>TrendCraft
+      </a>
+      
+      <!-- Mobile Toggle Elements -->
+      <div class="d-flex align-items-center d-md-none ms-auto me-2">
+        <button class="btn btn-link nav-link me-2" id="themeToggleMobile" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+      </div>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Content -->
+      <div class="collapse navbar-collapse" id="navContent">
+        <!-- Live Search Bar inside Navbar -->
+        <div class="search-wrapper mx-auto my-2 my-md-0 position-relative w-100 max-w-400">
+          <i class="bi bi-search search-icon position-absolute top-50 translate-middle-y start-3 text-muted"></i>
+          <input type="search" id="searchInput" class="form-control ps-5" placeholder="Search apparel...">
+        </div>
+        
+        <ul class="navbar-nav ms-auto align-items-center d-none d-md-flex">
+          <li class="nav-item">
+            <button class="btn btn-link nav-link" id="themeToggle" aria-label="Toggle Theme">
+              <i class="bi bi-moon-stars fs-5"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Header Section -->
+  <header class="hero-section text-center py-5 bg-surface mb-4">
+    <div class="container">
+      <h1 class="display-5 fw-bold mb-2">Elevate Your Daily Aesthetic</h1>
+      <p class="text-muted lead max-w-600 mx-auto fs-6">Explore curated high-quality shirts and pants designed for modern versatility and lasting comfort.</p>
+    </div>
+  </header>
+
+  <!-- Main Store Layout -->
+  <main class="container mb-5 flex-grow-1">
+    <div class="row g-4">
+      <!-- Filter Sidebar / Pill Menu -->
+      <section class="col-12" aria-label="Product Filtering">
+        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start align-items-center">
+          <span class="text-muted small fw-bold text-uppercase me-2 d-none d-md-inline">Filter By:</span>
+          <button class="btn btn-filter active" data-filter="all">All Collection</button>
+          <button class="btn btn-filter" data-filter="Shirts">Shirts</button>
+          <button class="btn btn-filter" data-filter="Pants">Pants</button>
+        </div>
+      </section>
+
+      <!-- Products Grid Display Container -->
+      <section class="col-12" aria-label="Product Gallery">
+        <!-- Skeleton Container (Visible during initial load imitation) -->
+        <div id="skeletonContainer" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+          <!-- Rendered programmatically via JS -->
+        </div>
+
+        <!-- Real Product Grid Container -->
+        <div id="productGrid" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 d-none">
+          <!-- Rendered programmatically via JS -->
+        </div>
+
+        <!-- State Handling UI: No Results Exception -->
+        <div id="noResults" class="text-center py-5 d-none">
+          <i class="bi bi-box-seize display-1 text-muted mb-3 d-block"></i>
+          <h3 class="fw-semibold">No apparel matches your search</h3>
+          <p class="text-muted">Try rechecking your spelling or altering your active filter parameters.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer mt-auto py-4 bg-surface border-top">
+    <div class="container text-center">
+      <p class="mb-1 fw-bold"><i class="bi bi-lightning-charge-fill text-accent me-1"></i>TrendCraft Store</p>
+      <p class="text-muted small mb-0">&copy; 2026 TrendCraft Inc. Built with semantic accessibility and Bootstrap 5.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main Script Architecture -->
+  <script src="script.js"></script>
+</body>
+</html>
